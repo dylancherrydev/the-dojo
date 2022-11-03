@@ -9,3 +9,16 @@ function App() {
 }
 
 export default App
+
+
+/*
+pages
+
+dashboard(homepage)
+login
+signup
+create
+
+project (project details)
+
+*/
