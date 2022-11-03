@@ -1,4 +1,14 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+// styles
 import './App.css'
+
+// pages and components
+import Dashboard from './pages/dashboard/Dashboard'
+import Create from './pages/create/Create'
+import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
+import Project from './pages/project/Project'
 
 function App() {
   return (
@@ -9,16 +19,3 @@ function App() {
 }
 
 export default App
-
-
-/*
-pages
-
-dashboard(homepage)
-login
-signup
-create
-
-project (project details)
-
-*/
