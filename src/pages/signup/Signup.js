@@ -74,7 +74,7 @@ export default function Signup() {
           onChange={handleFileChange}
         />
       </label>
-      {thumbnailError && <p className='error'>{thumbnailError}</p>}
+      {thumbnailError && <div className='error'>{thumbnailError}</div>}
       <button className="btn">
         Sign up
       </button>
