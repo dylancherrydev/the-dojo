@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLogin } from '../../hooks/useLogin'
 
 // styles
 import './Login.css'
@@ -6,10 +7,11 @@ import './Login.css'
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const { login, error, isPending } = useLogin()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password)
+    login(email, password)
   }
 
   return (
@@ -33,10 +35,9 @@ export default function Login() {
           value={password}
         />
       </label>
-      <button>Login</button>
-      {/* {!isPending && <button className="btn">Login</button>}
+      {!isPending && <button className="btn">Login</button>}
       {isPending && <p className='btn' disabled>Loading...</p>}
-      {error && <p className='error'>{error}</p>} */}
+      {error && <p className='error'>{error}</p>}
   </form>
   )
 }
