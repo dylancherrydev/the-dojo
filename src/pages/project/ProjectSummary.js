@@ -19,6 +19,7 @@ export default function ProjectSummary({ project }) {
         <h2 className="page-title">
           {project.name}
         </h2>
+        <p className="due-date">Created by: {project.createdBy.displayName}</p>
         <p className="due-date">
           Project due by: {project.dueDate.toDate().toDateString()}
         </p>
