@@ -1,6 +1,13 @@
 import Avatar from "../../components/Avatar"
+import { useFirestore } from "../../hooks/useFirestore"
 
 export default function ProjectSummary({ project }) {
+  const { deleteDocument } = useFirestore('projects')
+
+  const handleClick = (e) => {
+    deleteDocument(project.id)
+  }
+
   return (
     <div>
       <div className="project-summary">
@@ -20,6 +27,7 @@ export default function ProjectSummary({ project }) {
           </div>
         ))}
       </div>
+      <button className="btn" onClick={handleClick}>Mark as Complete</button>
     </div>
   )
 }
